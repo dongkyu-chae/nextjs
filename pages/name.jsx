@@ -7,7 +7,11 @@ const App = ({ user }) => {
     <div>
       <label>
         username
-        <input value={username} onChange={(e) => setUsername(e.target.value)} />
+        <input
+          placeholder="john or jerrynim"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
       </label>
       <p>github search from name : {username}</p>
 

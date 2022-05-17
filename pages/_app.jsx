@@ -1,13 +1,14 @@
-import css from "styled-jsx/css";
-import fetch from "isomorphic-unfetch";
+import Header from "../components/Header";
 
 const MyApp = ({ Component, pageProps }) => {
   return (
     <>
+      <Header />
       <Component {...pageProps} />
       <style jsx global>{`
-        body : {
+        body {
           margin: 0;
+          font-family: Noto Sans, Noto Sans KR;
         }
       `}</style>
     </>
