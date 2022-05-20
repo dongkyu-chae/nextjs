@@ -1,5 +1,7 @@
 import css from "styled-jsx/css";
+import { GoLocation } from "react-icons/go";
 import { GoMail } from "react-icons/go";
+import { GoLink } from "react-icons/go";
 
 const style = css`
   .profile-box {
@@ -9,11 +11,11 @@ const style = css`
   }
   .profile-image-wrapper {
     width: 100%;
-    border: 1px solid #e1e4e8;
   }
   .profile-image-wrapper .profile-image {
     display: block;
     width: 100%;
+    border-radius: 50%;
   }
   .profile-username {
     margin: 0;
@@ -56,10 +58,24 @@ const Profile = ({ user }) => {
         <h2 className="profile-username">{user.name}</h2>
         <p className="profile-user-login">{user.login}</p>
         <p className="profile-user-bio">{user.bio}</p>
-        <p className="profile-user-info">
-          <GoMail size={16} color="#6a737d" />
-          <span className="profile-user-info-text">{user.blog}</span>
-        </p>
+        {user.location ? (
+          <p className="profile-user-info">
+            <GoLocation size={16} color="#6a737d" />
+            <span className="profile-user-info-text">{user.location}</span>
+          </p>
+        ) : null}
+        {user.email ? (
+          <p className="profile-user-info">
+            <GoMail size={16} color="#6a737d" />
+            <span className="profile-user-info-text">{user.email}</span>
+          </p>
+        ) : null}
+        {user.blog ? (
+          <p className="profile-user-info">
+            <GoLink size={16} color="#6a737d" />
+            <span className="profile-user-info-text">{user.blog}</span>
+          </p>
+        ) : null}
       </div>
       <style jsx>{style}</style>
     </>

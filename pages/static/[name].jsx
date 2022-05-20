@@ -29,7 +29,11 @@ export const getStaticProps = async ({ params }) => {
 
 export async function getStaticPaths() {
   return {
-    paths: [{ params: { name: "jerrynim" } }, { params: { name: "john" } }],
+    paths: [
+      { params: { name: "jerrynim" } },
+      { params: { name: "john" } },
+      { params: { name: "dongkyu-chae" } },
+    ],
     fallback: true,
   };
 }

@@ -8,7 +8,7 @@ const App = ({ user }) => {
       <label>
         username
         <input
-          placeholder="john or jerrynim"
+          placeholder="john or dongkyu-chae"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
